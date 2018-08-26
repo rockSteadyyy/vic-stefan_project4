@@ -11,18 +11,22 @@
     }
 }
 
-h3 {
-    
-}
-
 .headerList {
     display: flex;
     flex-direction: row;
-    
-    // width: 70%;
 
     li {
         padding: 15px;
+    }
+
+    a {
+        padding-bottom: 5px;
+        transition: all 0.3s;
+
+        &:hover {
+            border-bottom: 2px solid black;
+            font-weight: 700;
+        }
     }
 }
 
@@ -30,18 +34,21 @@ h1 {
     text-align: center;
     color: $accentColor;
     padding: 50px 0 65px 0;
-}
-
-.title {
     position: relative;
 }
 
-.iconContainer {
-    position: absolute;
-    top: 70px;
-    right: 195px;
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.fa-leaf {
+.fa-parachute-box {
     font-size: 65px;
+    margin-left: 15px;
+}
+
+.highlight {
+    font-weight: 700;
 }

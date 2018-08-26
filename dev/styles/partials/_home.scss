@@ -1,0 +1,155 @@
+// HOMEPAGE STYLES
+
+// SECTION 2: SEARCH STYLES
+.searchSection {
+    margin-top: 50px;
+
+    h4 {
+        padding-bottom: 25px;
+    }
+}
+
+.formBackground {
+    background: linear-gradient($thirdColor, white, $thirdColor);
+    padding: 30px 0 70px 0;
+}
+
+form {
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+form, 
+fieldset {
+    background-color: white;
+    border: 1px solid white;
+}
+
+.formButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.countriesButton,
+.vulnerableGroupButton {
+    width: 50%;
+}
+
+button {
+    @include primaryFont(16);
+    width: 135px;
+    height: 50px;
+}
+
+.countriesButton {
+    background-color: $accentColor;
+    border: 1.5px solid $accentColor;
+    color: white;
+    opacity: 0.85;
+}
+
+.countriesButton,
+.submitSearch {
+    &:hover {
+        background-color: lighten($accentColor, 20);
+        border: 1.5px solid lighten($accentColor, 20);
+        transition: all 0.3s;
+    }
+}
+
+.vulnerableGroupButton {
+    background-color: $thirdColor;
+    border: 1.5px solid $accentColor;
+    color: $accentColor;
+
+    &:hover {
+        background-color: lighten($thirdColor, 20);
+        border: 1.5px solid lighten($accentColor, 20);
+        transition: all 0.3s;
+    }
+}
+
+.countryTable,
+.vulnerableGroupTable {
+    padding: 15px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.countryTable {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.vulnerableGroupTable {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.country,
+.vulnerableGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+    justify-self: center;
+}
+
+.country input[type="checkbox"],
+.vulnerableGroup input[type="checkbox"] {
+    opacity: 0;
+    margin-left: 8px;
+
+    &:checked + .checkmark:after {
+        content: "";
+        transition: all 1s;
+    }
+}
+
+.country label,
+.vulnerableGroup label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkmark:before {
+    content: "";
+    display: inline-block;
+    height: 13.5px;
+    width: 13.5px;
+    border: 1.5px solid black;
+    position: absolute;
+    top: -1.5px;
+    left: 6px;
+}
+
+.checkmark:after {
+    content: none;
+    display: inline-block;
+    height: 5px;
+    width: 9.5px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 8.5px;
+    top: 1px;
+    color: $accentColor;
+}
+
+.submitSearch {
+    background-color: $accentColor;
+    border: 1px solid $accentColor;
+    color: white;
+    opacity: 0.85;
+    margin: 0 auto;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+// END OF SECTION 2: SEARCH STYLES
