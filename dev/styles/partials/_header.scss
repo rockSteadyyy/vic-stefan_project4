@@ -44,11 +44,29 @@ h1 {
     align-items: center;
 }
 
-.fa-parachute-box {
-    font-size: 65px;
-    margin-left: 15px;
+header {
+    background: url(./earth.svg);
 }
 
-.highlight {
-    font-weight: 700;
+.iconContainer {
+    position: relative;
 }
+
+.fa-parachute-box {
+    position: absolute;
+    font-size: 65px;
+    top: -30px;
+    margin-left: 15px;
+    z-index: 20;
+
+}
+
+.earth {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    z-index: 10;
+    top: 0;
+    left: -25px;
+}
+
