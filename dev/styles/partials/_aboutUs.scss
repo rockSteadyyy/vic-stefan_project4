@@ -1,4 +1,4 @@
-// ABOUT PAGE AND RESOURCES PAGE STYLES
+// ABOUT PAGE, RESOURCES PAGE and RESULTS PAGE STYLES
 
 
 // About Page styles (about.html)
@@ -38,4 +38,10 @@
     }
 }
 
-
+.resourcesFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 1px;
+}
