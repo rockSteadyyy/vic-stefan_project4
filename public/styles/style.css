@@ -164,12 +164,26 @@ h1 {
   justify-content: center;
   align-items: center; }
 
-.fa-parachute-box {
-  font-size: 65px;
-  margin-left: 15px; }
+header {
+  background: url(./earth.svg); }
 
-.highlight {
-  font-weight: 700; }
+.iconContainer {
+  position: relative; }
+
+.fa-parachute-box {
+  position: absolute;
+  font-size: 65px;
+  top: -30px;
+  margin-left: 15px;
+  z-index: 20; }
+
+.earth {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+  top: 0;
+  left: -25px; }
 
 .searchSection {
   margin-top: 50px; }
@@ -298,6 +312,59 @@ button {
   margin: 0 auto;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
 
+.resultsSection {
+  background: linear-gradient(#EBEBEB, white, #EBEBEB);
+  padding: 20px 0 50px 0;
+  margin-top: 50px; }
+  .resultsSection h5 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-family: 'Cabin', sans-serif;
+    color: #D2113A;
+    font-weight: 400; }
+  .resultsSection h6 {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    margin: 12px 0; }
+
+.resultsHeadings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+
+.back a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 5px; }
+  .back a:hover {
+    color: gray;
+    transition: all 0.3s; }
+  .back a .fa-long-arrow-alt-left {
+    font-size: 25px; }
+  .back a h6 {
+    margin-left: 10px; }
+
+.results {
+  padding: 15px 30px;
+  background: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
+
+.resultListItem {
+  padding-bottom: 10px; }
+
+.vulnerableGroupHeading {
+  color: gray; }
+
+.charities {
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400; }
+
 .aboutSection {
   padding-bottom: 60px; }
   .aboutSection p:last-child {
@@ -319,6 +386,13 @@ button {
   .resourcesSection a:hover {
     color: #9a9a9a;
     transition: color 0.3s; }
+
+.resourcesFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 1px; }
 
 footer {
   background-color: #333333;
@@ -357,8 +431,13 @@ footer {
     font-family: 'Cabin', sans-serif;
     padding-bottom: 30px; }
   .fa-parachute-box {
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 27px; }
+  .earth {
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    left: -10px; }
   .searchSection .countryTable,
   .searchSection .vulnerableGroupTable {
     padding: 5px;
@@ -377,8 +456,11 @@ footer {
     padding: 15px 0 0 0; }
   .title .fa-parachute-box {
     font-size: 30px;
-    margin-left: 5px;
-    margin-top: 60px; }
+    left: -10px; }
+  .title .earth {
+    width: 55px;
+    height: 55px;
+    top: 15px; }
   .introSection h4,
   .searchSection h4,
   .aboutSection h4,
@@ -401,10 +483,12 @@ footer {
   .searchSection .vulnerableGroup {
     justify-content: flex-start;
     padding: 5px; }
-  .resourcesSection li {
-    font-size: 12.5px;
-    font-size: 1.25rem;
-    font-family: 'Cabin', sans-serif; } }
+  .resourcesSection {
+    padding-top: 40px; }
+    .resourcesSection li {
+      font-size: 12.5px;
+      font-size: 1.25rem;
+      font-family: 'Cabin', sans-serif; } }
 
 .wrapper {
   max-width: 1280px;
@@ -453,3 +537,9 @@ p {
   font-size: 1.45rem;
   font-family: 'Varela', sans-serif;
   line-height: 1.5; }
+
+.highlight {
+  font-weight: 700; }
+
+.italic {
+  font-style: italic; }
